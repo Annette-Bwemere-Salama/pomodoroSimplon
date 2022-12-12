@@ -4,8 +4,8 @@ html{
 
 *, *::before, *::after {
     box-sizing: inherit;
-    margin: 0%;
-    padding: 0%;
+    margin: 0;
+    padding: 0;
 }
 
 :root {
@@ -17,10 +17,58 @@ html{
 
 body {
     background-image: var(--pomodoro);
-    background-color: rgb(162, 230, 247);
+    background-color: rgb(203, 229, 235);
     transition: background-image 2s ease;
     font-family: 'Tangerine', serif;
     font-size: 100px;
     text-shadow: 10px 10px 10px rgb(0, 0, 0);
     user-select: none;
+}
+
+progress {
+    border-radius: 4px;
+    width: 100%;
+    height: 12px;
+    top: 0;
+}
+
+
+progress::-webkit-progress-bar{
+    background-color: darkgoldenrod;
+}
+
+
+progress::wbkit-progress-value {
+    background-color: beige;
+}
+
+.timer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    align-items: center;
+}
+
+.clock{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+}
+
+
+.mode-button{
+    font-size: medium;
+    height: 30px;
+    cursor: pointer;
+    box-shadow: none;
+    font-weight: bolder;
+    color: rgb(0, 0, 0);
+    border: 1px solid burlywoods;
+    margin: 0px;
+    border-radius: 5px;
+    padding: 2px 12px;
+    background: none;
 }
