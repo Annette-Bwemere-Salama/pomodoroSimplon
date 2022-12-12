@@ -10,10 +10,17 @@ const timer = {
 let interval;
 
 
-const modeButtons = document.querySelector('#js-mode-buttons');
 
-modeButtons.addEventListener('click', handleMode);
+const mainButton = document.getElementById('js-btn');
+mainButton.addEventListener('click', ()=>{
+    const {action} = mainButton.dataset;
 
+    if (action === "start") {
+        startTimer()
+    }else{
+        stopTimer
+    }
+})
 
 
 function handleMode(e) {
@@ -21,10 +28,37 @@ function handleMode(e) {
 
 
     if (!mode) return;
-
+    
     switchMode(mode);
 }
 
+
+
+const modeButtons = document.querySelector('#js-mode-buttons');
+modeButtons.addEventListener('click', handleMode);
+
+
+
+function getRemainingTime(endTime) {
+    
+    const currentTime = Date.parse(new Date());
+    const difference = endTime - currentTime;
+
+
+
+    const total = Number.parseInt(difference / 1000, 10);
+    const minutes = Number.parseInt((total/60) % 60, 10);
+    const seconds = Number.parseInt(total % 60, 10);
+
+
+
+    return {
+
+        total,
+        minutes,
+        seconds
+    };
+}
 
 
 
@@ -33,10 +67,8 @@ function startTimer() {
     const endTime = Date.parse(new Date()) + total * 1000;
 
 mainButton.dataset.action = 'stop';
-mainButton.style.backgroundImage('assets/stop_FILL0_wght700_GRAD200_opsz48.svg')
-mainButton.className.add('active')
-
-
+mainButton.textContent= 'stop'
+mainButton.classList.add('active')
 
 
     interval = setInterval(()=>{
@@ -55,36 +87,7 @@ mainButton.className.add('active')
 }
 
 
-function getRemainingTime(endTime) {
-    
-    const currentTime = Date.parse(new Date());
-    const difference = endTime - currentTime;
 
-
-
-    const total = Number.parseInt(difference / 1000, 10);
-    const minutes = Number.parseInt((total/60) * 60, 10);
-    const seconds = Number.parseInt(total % 60, 10);
-
-
-
-    return {
-
-        total,
-        minutes,
-        seconds
-    };
-}
-
-
-const mainButton = document.getElementById('js-btn');
-mainButton.addEventListener('click', ()=>{
-    const {action} = mainButton.dataset;
-
-    if (action === "start") {
-        startTimer()
-    }
-})
 
 function switchMode(mode) {
     timer.mode = mode;
