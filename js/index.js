@@ -74,6 +74,14 @@ function getRemainingTime(endTime) {
 }
 
 
+const mainButton = document.getElementById('js-btn');
+mainButton.addEventListener('click', ()=>{
+    const {action} = mainButton.dataset;
+
+    if (action === "start") {
+        startTimer()
+    }
+})
 
 function switchMode(mode) {
     timer.mode = mode;
