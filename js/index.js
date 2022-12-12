@@ -53,8 +53,10 @@ function startTimer() {
         switch (timer.mode) {
             case 'pomodoro':
                 if (timer.sessions % timer.longBreakInterval === 0) {
+                    longBreak.play()
                     switchMode('longBreak');
                 }else {
+                    shortBreak.play()
                     switchMode('shortBreak')
                 }                
                 break;        
