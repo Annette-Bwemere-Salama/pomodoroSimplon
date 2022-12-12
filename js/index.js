@@ -10,7 +10,7 @@ const timer = {
 let interval;
 
 
-const modeButtons = document.querySelector('js-mode-buttons');
+const modeButtons = document.querySelector('#js-mode-buttons');
 
 modeButtons.addEventListener('click', handleMode);
 
@@ -43,7 +43,7 @@ function switchMode(mode) {
         .querySelector(`[data-mode="${mode}"]`).classList.add('active');
       document
         .body.style.backgroundImage = `var(--${mode})`;
-
+console.log("Annette Switch");
       
 updateClock();
 }
