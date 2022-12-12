@@ -127,10 +127,15 @@ function switchMode(mode) {
         .querySelector(`[data-mode="${mode}"]`).classList.add('active');
       document
         .body.style.backgroundImage = `var(--${mode})`;
-console.log("Annette Switch");
+// console.log("Annette Switch");
+document
+    .getElementById('js-progress')
+    .setAttribute('max', timer.remainingTime.total);
       
 updateClock();
 }
+
+
 
 
 function updateClock() {
