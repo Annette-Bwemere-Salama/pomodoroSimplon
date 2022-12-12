@@ -18,7 +18,7 @@ mainButton.addEventListener('click', ()=>{
     if (action === "start") {
         startTimer()
     }else{
-        stopTimer
+        stopTimer();
     }
 })
 
