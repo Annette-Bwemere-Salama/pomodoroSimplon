@@ -1,10 +1,12 @@
-body{
-   margin: 0%;
-   padding: 0%;
-   background-color: #9fe5ff;
-   /* background: hsl(0,0%,90%) url("chrome://global/skin/media/imagedoc-lightnoise.png"); */    
+html{
+    box-sizing: border-box;
 }
 
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0%;
+    padding: 0%;
+}
 
 .container{
     display: flex;
