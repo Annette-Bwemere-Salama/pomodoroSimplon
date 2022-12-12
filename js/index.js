@@ -23,6 +23,14 @@ mainButton.addEventListener('click', ()=>{
 })
 
 
+function stopTimer() {
+    clearInterval(interval);
+
+    mainButton.dataset.action = 'start'
+    mainButton.textContent = 'start'
+    mainButton.classList.remove('active')
+}
+
 function handleMode(e) {
     const {mode} = e.target.dataset;
 
