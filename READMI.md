@@ -9,8 +9,6 @@
 
 <br>
 <br>
-
-
 <p>
 La minuterie Pomodoro que nous allons construire implémente parfaitement la technique Pomodoro et vous indique exactement quand travailler et quand faire une courte pause. 
  la processus de base est la suivante :
@@ -20,8 +18,15 @@ La minuterie Pomodoro que nous allons construire implémente parfaitement la tec
 <li>Démarrez une minuterie de 25minutes.<li>
 <li>Travaillez jusqu'à ce que la minutérie sonne.<li>
 <li> Faites une courte pause de cinq minutes<li>
-<li> Tous les quatres pomodoros, faites une pause plus longue (15 minutes)<li>
-
-
+<li> Tous les quatres pomodoros, faites une pause plus longue (15 minutes)
+<li>
 </ul>
+
+## Conditions préalables
+
+<p>
+    Vous devez avoir [Node.js](https://nodejs.org/en/download/) et
+[npm](https://www.npmjs.com/get-npm) installé sur votre machine. Ce projet a été
+construit avec les versions suivantes :
+</p>
 
