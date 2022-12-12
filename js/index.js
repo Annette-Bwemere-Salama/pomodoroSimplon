@@ -152,9 +152,12 @@ function updateClock() {
     min.textContent = minutes;
     sec.textContent = seconds;
 
+    const text = timer.mode === 'pomodoro' ? 'Retourne travailler!' : 'Faites une pause!:';
+    document.title = `${minutes}:${seconds} — ${text}`;
+
 
     const progress = document.getElementById('js-progress');
-    progress.value = timer[timer.mode] * 60 -timer.remainingTime.total
+    progress.value = timer[timer.mode] * 60 - timer.remainingTime.total
 }
 
 
