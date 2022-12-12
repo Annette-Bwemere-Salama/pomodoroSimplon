@@ -8,23 +8,19 @@ html{
     padding: 0%;
 }
 
-.container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    box-shadow: 10px 5px 5px rgb(241, 241, 241);
-    background-color: aliceblue;
-    /* border: ; */
+:root {
+    --pomodoro: url('/home/anette-bwemere/BlockchainOpen/pomodoroSimplon/assets/undraw_mindfulness_re_bgo0(1).svg');
+    --shortBreak: url('assets/lesly-juarez-DFtjXYd5Pto-unsplash.jpg');
+    --longBreak: url('assets/jared-rice-NTyBbu66_SI-unsplash.jpg');
 }
 
-.coeur{
-    display: flex;
-    background-color: cadetblue;
-    border-radius: 100%;
-    /* height: 20%;
-    width: 100%;
-    margin: 20%;
-    padding: 20%; */
+
+body {
+    background-image: var(--pomodoro);
+    background-color: rgb(162, 230, 247);
+    transition: background-image 2s ease;
+    font-family: 'Tangerine', serif;
+    font-size: 100px;
+    text-shadow: 10px 10px 10px rgb(0, 0, 0);
+    user-select: none;
 }

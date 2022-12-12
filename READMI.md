@@ -46,5 +46,8 @@ https://github.com/Annette-Bwemere-Salama/pomodoroSimplon
 
 ```
 
+# ressources
+<p>Il ya un fichier texte qui contient les réssources nécessaire pour la réalisation de se projet , C'est mieux d'y jeter un oeil je suis convecus que de dernier va vous aider</p>
+
 ## Contributeur
 
