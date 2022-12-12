@@ -38,6 +38,7 @@ function handleMode(e) {
     if (!mode) return;
     
     switchMode(mode);
+    stopTimer();
 }
 
 
