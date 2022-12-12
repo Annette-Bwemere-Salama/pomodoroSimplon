@@ -6,8 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>POMODORO</title>
     <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 <body>
+    <div class="container">
+        <h1>Pomodoro</h1>
+        <div class="pomodoro">
+            <div class="coeur">
+                <p class="coeurPomodoro">14:16</p>
+            </div>
+        </div>
+        <div class="play">
+            <img src="/assets/stop_FILL0_wght700_GRAD200_opsz48.svg" alt="" srcset="">
+            <img src="/assets/pause_FILL0_wght400_GRAD0_opsz48.svg" alt="" sizes="" srcset="" id="pause">
+        </div>
+        <div class="icons">
+        <img src="/assets/undraw_mindfulness_re_bgo0(1).svg" alt="" srcset="">
+        </div>
+    </div>
+    <script>
+        let pause = document.getElementById('pause')
+        pause.onclick(()=>{
+            console.log("click Me Annette Bwemere");
+        })
+    </script>
     <script src="/js/index.js"></script>
 </body>
 </html>
