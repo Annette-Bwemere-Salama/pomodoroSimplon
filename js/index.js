@@ -3,7 +3,7 @@ const timer = {
     shortBreak: 5,
     longBreak: 15,
     longBreakInterval : 4,
-    sessions: 0
+    sessions: 0,
 }
 
 
@@ -75,6 +75,8 @@ function startTimer() {
     let {total} = timer.remainingTime;
     const endTime = Date.parse(new Date()) + total * 1000;
 
+    if (timer.mode === 'pomodoro') timer.sessions++;    
+
 mainButton.dataset.action = 'stop';
 mainButton.textContent= 'stop'
 mainButton.classList.add('active')
@@ -84,13 +86,24 @@ mainButton.classList.add('active')
         timer.remainingTime = getRemainingTime(endTime);
 
         updateClock();
-
-
-
         total = timer.remainingTime.total;
-
         if (total <= 0) {
             clearInterval(interval)
+
+        
+        switch (timer.mode) {
+            case 'pomodoro':
+                if (timer.sessions % timer.longBreakInterval === 0) {
+                    switchMode('longBreak');
+                }else {
+                    switchMode('shortBreak')
+                }                
+                break;        
+            default:
+                switchMode('pomodoro');
+        }
+
+        startTimer()
         }
     }, 1000);
 }
@@ -114,10 +127,15 @@ function switchMode(mode) {
         .querySelector(`[data-mode="${mode}"]`).classList.add('active');
       document
         .body.style.backgroundImage = `var(--${mode})`;
-console.log("Annette Switch");
+// console.log("Annette Switch");
+document
+    .getElementById('js-progress')
+    .setAttribute('max', timer.remainingTime.total);
       
 updateClock();
 }
+
+
 
 
 function updateClock() {
@@ -133,7 +151,16 @@ function updateClock() {
 
     min.textContent = minutes;
     sec.textContent = seconds;
+
+    const text = timer.mode === 'pomodoro' ? 'Retourne travailler!' : 'Faites une pause!:';
+    document.title = `${minutes}:${seconds} — ${text}`;
+
+
+    const progress = document.getElementById('js-progress');
+    progress.value = timer[timer.mode] * 60 - timer.remainingTime.total
 }
+
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
