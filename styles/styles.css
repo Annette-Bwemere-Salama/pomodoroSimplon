@@ -9,14 +9,15 @@ html{
 }
 
 :root {
-    --pomodoro: url('/home/anette-bwemere/BlockchainOpen/pomodoroSimplon/assets/undraw_mindfulness_re_bgo0(1).svg');
-    --shortBreak: url('assets/lesly-juarez-DFtjXYd5Pto-unsplash.jpg');
-    --longBreak: url('assets/jared-rice-NTyBbu66_SI-unsplash.jpg');
+    --pomodoro: url('/assets/undraw_mindfulness_re_bgo0(1).svg');
+    --shortBreak: url('/assets/zoltan-tasi-vHnVtLK8rCc-unsplash.jpg');
+    --longBreak: url('/assets/jared-rice-NTyBbu66_SI-unsplash.jpg');
 }
 
 
 body {
-    background-image: var(--pomodoro);
+    /* background-image: var(--pomodoro); */
+   background-image: var(--shortBreak);
     background-color: rgb(203, 229, 235);
     transition: background-image 2s ease;
     font-family: 'Tangerine', serif;
@@ -53,6 +54,7 @@ progress::wbkit-progress-value {
     padding: 20px;
     align-items: center;
     justify-content: center;
+    margin-left: 50%;
 }
 
 .clock{
@@ -60,6 +62,8 @@ progress::wbkit-progress-value {
     margin-bottom: 30px;
     display: flex;
     align-items: center;
+    /* margin-left: 50%; */
+    justify-content: center;
 }
 
 
@@ -99,7 +103,11 @@ progress::wbkit-progress-value {
     /* padding: 0px 12px; */
     border-radius: 100px;
     transition: color 0.5s ease-in-out 0s; 
-  }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 45%;
+}
 
 button:focus, button:active {
     outline: none;
