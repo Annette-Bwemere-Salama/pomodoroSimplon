@@ -1,6 +1,5 @@
 # POMODORO
 
-
 <p>C'est une application simple qui vous permet de rester concentré et productif en programmant des sessions de travail et des pause consécutives.</p>
 <br>
 <br>
@@ -26,7 +25,26 @@ La minuterie Pomodoro que nous allons construire implémente parfaitement la tec
 
 <p>
     Vous devez avoir [Node.js](https://nodejs.org/en/download/) et
-[npm](https://www.npmjs.com/get-npm) installé sur votre machine. Ce projet a été
-construit avec les versions suivantes :
+    [npm](https://www.npmjs.com/get-npm) installé sur votre machine. Ce projet a été
+    construit avec les versions suivantes :
 </p>
+
+* Node v16.18.1 
+* Npm 8.19.2
+
+
+## Commencer
+
+
+Clonez ce référentiel sur votre machine local avec:
+
+
+```bash
+
+$ git clone
+https://github.com/Annette-Bwemere-Salama/pomodoroSimplon
+
+```
+
+## Contributeur
 
