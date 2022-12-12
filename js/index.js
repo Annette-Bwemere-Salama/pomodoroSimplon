@@ -32,6 +32,9 @@ function startTimer() {
     let {total} = timer.remainingTime;
     const endTime = Date.parse(new Date()) + total * 1000;
 
+mainButton.dataset.action = 'stop';
+mainButton.style.backgroundImage('assets/stop_FILL0_wght700_GRAD200_opsz48.svg')
+mainButton.className.add('active')
 
 
 
@@ -121,3 +124,6 @@ function updateClock() {
 }
 
 
+document.addEventListener('DOMContentLoaded', () => {
+    switchMode('pomodoro');
+  });
