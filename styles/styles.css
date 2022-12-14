@@ -16,10 +16,14 @@ html{
 
 
 body {
-    /* background-image: var(--pomodoro); */
-   background-image: var(--shortBreak);
+
     background-color: rgb(203, 229, 235);
     transition: background-image 2s ease;
+}
+
+
+.app{
+
     font-family: 'Tangerine', serif;
     font-size: 100px;
     text-shadow: 10px 10px 10px rgb(0, 0, 0);
@@ -28,10 +32,8 @@ body {
     padding: 0;
     background-repeat: no-repeat;
     background-position: center;
-    margin-top: 20%;
 
 }
-
 progress {
     border-radius: 4px;
     width: 100%;
@@ -42,7 +44,7 @@ progress {
 
 
 progress::-webkit-progress-bar{
-    background-color: darkgoldenrod;
+    background-color: rgb(203, 229, 235);
 }
 
 
@@ -52,8 +54,6 @@ progress::wbkit-progress-value {
 
 .timer{
     position: absolute;
-    /* top: 50%;
-    left: 50%; */
     transform: translate(-50%, -50%);
     padding: 20px;
     align-items: center;
@@ -66,7 +66,13 @@ progress::wbkit-progress-value {
     margin-bottom: 30px;
     display: flex;
     align-items: center;
-    /* margin-left: 50%; */
+    justify-content: center;
+}
+
+.mode-buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: center;
 }
 
@@ -87,30 +93,26 @@ progress::wbkit-progress-value {
 
 .mode-button.active{
     border-color: rgb(255, 183, 0);
-    background-color: rgb(122, 169, 159);
+    background-color: rgb(203, 229, 235);
     color: rgb(0, 0, 0);
 }
+
+
 
 
 .main-button {
      cursor: pointer;
     box-shadow: rgb(125, 166, 176) 0px 6px 0px;
-    height: 200px;
     text-transform: uppercase;
     color: hsl(175, 26%, 41%);
     font-weight: bold;
-    width: 170px;
     background-color: transparent;
-    /* border-width: initial; */
-    /* border-style: none; */
-    margin: 20px 0px 0px;
-    /* padding: 0px 12px; */
     border-radius: 100px;
     transition: color 0.5s ease-in-out 0s; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 45%;
+    display: block;
+    margin-left:auto;
+    margin-right: auto;
+
 }
 
 button:focus, button:active {
@@ -128,9 +130,9 @@ button:focus, button:active {
     display: none;
   }
   
-  @media screen and (max-width: 550px) {
+  /* @media screen and (max-width: 550px) {
     .clock {
       font-size: 8rem;
     }
   }
-  
+   */
